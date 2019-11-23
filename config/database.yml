@@ -82,6 +82,7 @@ test:
 #
 production:
   <<: *default
-  database: textblast_production
+  url: <%= ENV['DATABASE_URL'] %>
+  # database: textblast_production
   # username: rails
   # password: <%= ENV['TEXTBLAST_DATABASE_PASSWORD'] %>
