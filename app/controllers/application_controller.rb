@@ -2,7 +2,7 @@ class ApplicationController < ActionController::API
     # protect_from_forgery with: :null_session
     respond_to :json
     
-    # before_action :underscore_params!
+    before_action :underscore_params!, except: :index
     before_action :authenticate_user
     
     private
